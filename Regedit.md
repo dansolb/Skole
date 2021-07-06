@@ -26,6 +26,15 @@ Installert programvare:
 * HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths
 * HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 
+## Restore point/Shadow Copy
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\BackupRestore
+
+Within this path, we’ve got three subkeys:
+* FilesNotToBackup — specifies files that should not be backed up or restored.
+* FilesNotToSnapshot (only Vista/2008+)— Specify files that should be deleted from newly-created shadow copies
+* KeysNotToRestore — Provides the names of registry keys and values that backup applications should not restore
+
 ## Recycle Bin
 Når en fil blir flyttet til søppeldunken vil MFT entry bli slettet for filen så vil en ny MFT entry.
 * [original drive letter][index number].[original file extension]
